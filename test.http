@@ -1,0 +1,39 @@
+GET http://localhost:4004/v2/odata/Employees
+
+###
+
+GET http://localhost:4004/v2/odata/Employees(1)
+
+###
+
+POST http://localhost:4004/v2/odata/Employees
+Content-Type:application/json
+
+{
+    "EMP_ID": 0,
+    "EMP_NAME": "Tanya S",
+    "EMP_EMAIL": "",
+    "EMP_EXPERIANCE": "3 years",
+    "EMP_SALARY": "70000",
+    "EMP_PRO_PRO_ID": "",
+    "FILE_NAME":"Random_image"    
+}
+
+###
+
+DELETE http://localhost:4004/v2/odata/Employees(EMP_ID=6)
+
+###
+
+GET http://localhost:4004/v2/odata/Files
+###
+DELETE  http://localhost:4004/v2/odata/Files(FILE_ID=1506501c-6868-4531-84a2-02edb8caa0ff)
+###
+
+POST http://localhost:4004/v2/odata/Files
+Content-Type: application/json
+
+{
+    "FILE_NAME":"Random_image",
+    "MEDIA_TYPE":"image/png"
+}
